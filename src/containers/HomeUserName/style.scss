@@ -1,4 +1,5 @@
 @import '../../styles/base/variables';
+@import '../../styles/base/mixins';
 
 .name {
   $parent: &;
@@ -11,9 +12,85 @@
   &__form {
     &--title {
       font-size: 3rem;
+      @include mq-xs {
+        font-size: 2rem;
+      }
     }
     &--input {
       height: 45px;
     }
+  }
+  &__logo {
+    position: relative;
+    height: 200px;
+    width: 180px;
+    top: 0;
+    left: 0;
+    &--image-front {
+      position: absolute;
+      width: 130px;
+      top: 0;
+      left: 0;
+      transform: rotate(-60deg);
+      scale: 0.95;
+      opacity: 0;
+      z-index: 2;
+      animation: cardBack 0.5s ease-out forwards;
+      @include mq-xs {
+        width: 100px;
+      }
+    }
+    &--image-back {
+      position: absolute;
+      width: 130px;
+      top: 0;
+      left: 30px;
+      transform: rotate(20deg);
+      opacity: 0;
+      animation: cardFront 0.5s ease-out forwards;
+      animation-delay: 0.1s;
+      z-index: 3;
+      @include mq-xs {
+        width: 100px;
+      }
+    }
+  }
+}
+
+@keyframes cardBack {
+  0% {
+    opacity: 0;
+    transform: rotate(-60deg);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(-16deg);
+  }
+  70% {
+    opacity: 1;
+    transform: rotate(-20deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(-20deg);
+  }
+}
+
+@keyframes cardFront {
+  0% {
+    opacity: 0;
+    transform: rotate(-20deg);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(25deg);
+  }
+  70% {
+    opacity: 1;
+    transform: rotate(20deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(20deg);
   }
 }

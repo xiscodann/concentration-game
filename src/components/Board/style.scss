@@ -1,13 +1,103 @@
+@import '../../styles/base/mixins';
+
+@mixin setAnimationProperties($i) {
+  opacity: 0;
+  animation: cardsAppear 0.2s ease-out forwards;
+  animation-delay: #{$i * 0.03}s;
+}
+
 .board {
   $parent: &;
   display: grid;
   align-items: center;
   justify-content: center;
-  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   background-color: #142c4d;
-  padding: 40px;
+  padding: 25px;
   border-radius: 9px;
   box-shadow: 0 0 28px #0a1436;
-  margin-top: 40px;
+  height: 75vh;
+  max-width: 630px;
+  width: 100%;
+  min-height: 400px;
+  @include mq-md {
+    margin-top: 40px;
+    @include mq-landscape {
+      margin-top: 0;
+    }
+  }
+  &.easy {
+    grid-template-columns: repeat(2, 1fr);
+    max-height: 670px;
+
+    padding: 40px;
+    @include mq-md {
+      height: 60vh;
+      max-height: 470px;
+    }
+    @include mq-sm {
+      height: 60vh;
+      max-height: 400px;
+    }
+    @include mq-landscape {
+      min-height: 330px;
+    }
+    @for $i from 1 through 4 {
+      .custom-card:nth-child(#{$i}n) {
+        @include setAnimationProperties($i);
+      }
+    }
+  }
+  &.medium {
+    grid-template-columns: repeat(3, 1fr);
+    max-height: 670px;
+    max-width: 500px;
+    @include mq-md {
+      height: 60vh;
+      max-width: 400px;
+    }
+    @include mq-landscape {
+      min-height: 330px;
+      padding: 20px;
+    }
+    @for $i from 1 through 12 {
+      .custom-card:nth-child(#{$i}n) {
+        @include setAnimationProperties($i);
+      }
+    }
+  }
+  &.hard {
+    grid-template-columns: repeat(4, 1fr);
+    max-height: 670px;
+    max-width: 600px;
+
+    @include mq-md {
+      height: 60vh;
+      max-width: 430px;
+    }
+    @include mq-landscape {
+      min-height: 330px;
+      padding: 20px;
+    }
+    @for $i from 1 through 16 {
+      .custom-card:nth-child(#{$i}n) {
+        @include setAnimationProperties($i);
+      }
+    }
+  }
+}
+
+@keyframes cardsAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
