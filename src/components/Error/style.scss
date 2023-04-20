@@ -1,0 +1,45 @@
+@import '../../styles/base/variables';
+@import '../../styles/base/mixins';
+
+.error {
+  $parent: &;
+  display: grid;
+  place-content: center;
+  position: absolute;
+  background-color: map-get($colors, 'background');
+  text-align: center;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 1000;
+  &__container {
+    display: grid;
+    color: #fff;
+    place-content: center;
+    background-color: #10223a;
+    border-radius: 9px;
+    height: 80vh;
+    max-height: 650px;
+    margin: auto;
+    width: 45vw;
+    max-width: 650px;
+    min-width: 330px;
+    padding: 20px 35px;
+    @include mq-md {
+      width: 90%;
+      min-height: 350px;
+    }
+    &--cancel {
+      width: 120px;
+      height: 120px;
+      margin: auto;
+      padding-bottom: 15px;
+      @include mq-md {
+        @include mq-landscape {
+          display: none;
+        }
+      }
+    }
+  }
+}

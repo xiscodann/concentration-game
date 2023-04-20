@@ -1,0 +1,41 @@
+@mixin mq-xs {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+
+@mixin mq-sm {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mq-md {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin mq-lg {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin mq-xl {
+  @media (max-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin mq-landscape {
+  @media screen and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin mq-vertical {
+  @media screen and (orientation: portrait) {
+    @content;
+  }
+}
