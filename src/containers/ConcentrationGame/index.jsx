@@ -8,6 +8,8 @@ import { Board } from '../../components/Board';
 import Loading from '../../components/Loading';
 import Error from '../../components/Error';
 
+import background from '../../assets/background.jpg';
+
 const ConcentrationGame = () => {
   const { stateGame, setStateGame } = useContext(StateContext);
   const { userName, initialCards, retryFlag } = stateGame;
@@ -46,7 +48,10 @@ const ConcentrationGame = () => {
     );
 
   return (
-    <article className='game d-flex align-items-center justify-content-center flex-column'>
+    <article
+      className='game d-flex align-items-center justify-content-center flex-column'
+      style={{ backgroundImage: `url(${background})` }}
+    >
       {!loading ? (
         <>
           <section className='container'>
