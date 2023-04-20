@@ -9,10 +9,10 @@ For the installation of the project made with Vite JS it is necessary to execute
 1. Clone de project with HTTPS or SSH:
 
 ```
-    https://github.com/xiscodann/concentration-game.git
+    git clone https://github.com/xiscodann/concentration-game.git
 ```
 
-2. Once git clone finishes, install the dependencies with the following command:
+2. Once git clone finishes, enter the folder with `cd concentration-game` and install the dependencies with the following command:
 
 ```
     npm install
