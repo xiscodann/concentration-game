@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './style.scss';
+import { gridSize } from '../../helpers';
 import Score from '../Score';
 import Congrats from '../Congrats';
 import Card from '../Card';
@@ -45,7 +46,7 @@ export const Board = ({ list, scoreToWin }) => {
   return (
     <>
       <Score type='success' score={attempts.hits.length} />
-      <div className='board'>
+      <div className={`board ${gridSize(scoreToWin * 2)} order-3 order-lg-2`}>
         {list.map(({ id, name, url }, index) => {
           const cardId = `${id}-${index}`;
           const isFoundPair = attempts.hits.find(
@@ -68,6 +69,7 @@ export const Board = ({ list, scoreToWin }) => {
         })}
       </div>
       <Score type='failed' score={attempts.failed} />
+
       {attempts.hits.length === scoreToWin && <Congrats />}
     </>
   );

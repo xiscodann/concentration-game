@@ -1,4 +1,4 @@
-@import '../../styles/base/variables';
+@import '../../styles/base/mixins';
 
 .congrats {
   $parent: &;
@@ -9,7 +9,7 @@
   text-align: center;
   top: 0;
   left: 0;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   z-index: 1000;
   &__container {
@@ -17,7 +17,15 @@
     color: #fff;
     place-content: center;
     background-color: #10223a;
-    height: 500px;
-    width: 621px;
+    height: 80vh;
+    max-height: 650px;
+    width: 45vw;
+    max-width: 650px;
+    min-width: 330px;
+    padding: 20px 35px;
+    @include mq-md {
+      width: 90%;
+      min-height: 350px;
+    }
   }
 }

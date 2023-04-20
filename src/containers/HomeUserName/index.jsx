@@ -22,6 +22,7 @@ const HomeUserName = () => {
           <img
             src={'src/assets/cards-presentation.png'}
             alt='Concentrese logo game'
+            className='name__logo--image'
           />
         </div>
         <form className='name__form' onSubmit={handlerOnSubmitForm}>

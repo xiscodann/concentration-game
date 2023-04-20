@@ -28,7 +28,7 @@ const Congrats = () => {
   if (renderCongrats) {
     return (
       <div className='congrats'>
-        <div className='congrats__container'>
+        <div className='container congrats__container'>
           <h1>Excelente, {userName?.split(' ')[0]}</h1>
           <p className='mb-5'>
             Parece que dominas este nivel, ¿qué tal si cambias de dificultad?

@@ -27,3 +27,15 @@
     @content;
   }
 }
+
+@mixin mq-landscape {
+  @media screen and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin mq-vertical {
+  @media screen and (orientation: portrait) {
+    @content;
+  }
+}

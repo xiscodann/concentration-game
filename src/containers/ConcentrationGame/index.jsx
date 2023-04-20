@@ -50,7 +50,9 @@ const ConcentrationGame = () => {
       {!loading ? (
         <>
           <section className='container'>
-            <p className='m-0 game__presentation--title'>Hola, {userName}</p>
+            <p className='m-0 game__presentation--title pb-4'>
+              Hola, {userName}
+            </p>
             <div className='game__presentation--storage'>
               <Button
                 text={`No soy ${userName?.split(' ')[0]}`}
@@ -61,7 +63,7 @@ const ConcentrationGame = () => {
               />
             </div>
           </section>
-          <section className='container d-flex align-items-center justify-content-around'>
+          <section className='game__board container d-flex align-items-center justify-content-around'>
             <Board list={listOfCards} scoreToWin={stateGame.initialCards / 2} />
           </section>
         </>

@@ -1,13 +1,59 @@
+@import '../../styles/base/mixins';
+
 .board {
   $parent: &;
   display: grid;
   align-items: center;
   justify-content: center;
-  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   background-color: #142c4d;
   padding: 40px;
   border-radius: 9px;
   box-shadow: 0 0 28px #0a1436;
-  margin-top: 40px;
+  max-width: 630px;
+  width: 100%;
+  min-height: 400px;
+  @include mq-md {
+    margin-top: 40px;
+    @include mq-landscape {
+      margin-top: 0;
+    }
+  }
+  &.easy {
+    grid-template-columns: repeat(2, 1fr);
+    height: 75vh;
+    max-height: 670px;
+    @include mq-md {
+      height: 60vh;
+    }
+    @include mq-landscape {
+      min-height: 330px;
+    }
+  }
+  &.medium {
+    grid-template-columns: repeat(3, 1fr);
+    height: 75vh;
+    max-height: 670px;
+    padding: 25px;
+    @include mq-md {
+      height: 60vh;
+    }
+    @include mq-landscape {
+      min-height: 330px;
+      padding: 20px;
+    }
+  }
+  &.hard {
+    grid-template-columns: repeat(4, 1fr);
+    height: 75vh;
+    max-height: 670px;
+    padding: 25px;
+    @include mq-md {
+      height: 60vh;
+    }
+    @include mq-landscape {
+      min-height: 330px;
+      padding: 20px;
+    }
+  }
 }

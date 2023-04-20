@@ -1,4 +1,5 @@
 @import '../../styles/base/variables';
+@import '../../styles/base/mixins';
 
 .name {
   $parent: &;
@@ -11,9 +12,19 @@
   &__form {
     &--title {
       font-size: 3rem;
+      @include mq-xs {
+        font-size: 2rem;
+      }
     }
     &--input {
       height: 45px;
+    }
+  }
+  &__logo {
+    &--image {
+      @include mq-xs {
+        width: 100px;
+      }
     }
   }
 }
