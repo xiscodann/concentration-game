@@ -8,3 +8,8 @@ export const readStorage = () => {
   if (state === null) return false;
   return JSON.parse(state);
 };
+
+export const deleteStorage = () => {
+  localStorage.clear();
+  window.location.reload();
+};

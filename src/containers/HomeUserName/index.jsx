@@ -6,13 +6,13 @@ import { Button } from '../../components/Button';
 
 const HomeUserName = () => {
   const nameValue = useRef();
-  const { setIsUserNameExist } = useContext(StateContext);
+  const { stateGame, setStateGame } = useContext(StateContext);
 
   const handlerOnSubmitForm = (e) => {
     e.preventDefault();
     const userName = nameValue.current.value;
     saveStorage({ userName });
-    setIsUserNameExist(true);
+    setStateGame({ ...stateGame, userName: true });
   };
 
   return (

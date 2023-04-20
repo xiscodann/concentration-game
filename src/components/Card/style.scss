@@ -1,0 +1,37 @@
+.custom-card {
+  background: transparent;
+  border: 0;
+  width: 120px;
+  height: 120px;
+  &__button {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border: 0;
+    &--image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &--front,
+    &--back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      backface-visibility: hidden;
+      top: 0;
+      left: 0;
+    }
+    &--back {
+      transform: rotateY(180deg) rotateZ(50deg);
+    }
+  }
+  &.isFlipped &__button--front {
+    transform: rotateY(180deg) rotateZ(50deg);
+  }
+  &.isFlipped &__button--back {
+    transform: rotateY(0) rotateZ(0);
+  }
+}

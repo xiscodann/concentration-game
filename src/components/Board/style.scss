@@ -1,0 +1,13 @@
+.board {
+  $parent: &;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  background-color: #142c4d;
+  padding: 40px;
+  border-radius: 9px;
+  box-shadow: 0 0 28px #0a1436;
+  margin-top: 40px;
+}

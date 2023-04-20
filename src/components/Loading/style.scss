@@ -1,0 +1,33 @@
+$totalSize: 60px;
+
+.spinner {
+  $parent: &;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  width: $totalSize;
+  height: $totalSize;
+  &__animation {
+    display: block;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    border-right-color: #fff;
+    margin: auto;
+    width: $totalSize;
+    height: $totalSize;
+    animation: spinnerAnimation 0.8s linear infinite;
+  }
+  &__title {
+    color: #fff;
+    padding-top: 15px;
+  }
+}
+
+@keyframes spinnerAnimation {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

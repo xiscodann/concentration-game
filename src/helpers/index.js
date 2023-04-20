@@ -1,3 +1,3 @@
-import { saveStorage, readStorage } from './storage';
+import { saveStorage, readStorage, deleteStorage } from './storage';
 
-export { saveStorage, readStorage };
+export { saveStorage, readStorage, deleteStorage };

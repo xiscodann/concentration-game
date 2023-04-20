@@ -1,0 +1,23 @@
+@import '../../styles/base/variables';
+
+.error {
+  $parent: &;
+  display: grid;
+  place-content: center;
+  position: absolute;
+  background-color: map-get($colors, 'background');
+  text-align: center;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+  &__container {
+    display: grid;
+    color: #fff;
+    place-content: center;
+    background-color: #10223a;
+    height: 500px;
+    width: 621px;
+  }
+}
