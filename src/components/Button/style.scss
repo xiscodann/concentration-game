@@ -1,0 +1,25 @@
+@import '../../styles/base/variables';
+
+.custom {
+  $parent: &;
+  &__button {
+    color: #fff;
+    background-color: map-get($colors, 'background-button');
+    font-weight: 600;
+    padding: 12px 32px;
+    &--outline {
+      background: transparent;
+      border: 1px solid map-get($colors, 'background-button-secondary');
+      color: map-get($colors, 'background-button-secondary');
+      padding: 12px 32px;
+      &:hover {
+        background-color: #fff;
+        color: map-get($colors, 'background-button');
+      }
+    }
+    &:hover {
+      background-color: map-get($colors, 'background-button-hover');
+      color: #fff;
+    }
+  }
+}

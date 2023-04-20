@@ -1,0 +1,19 @@
+@import '../../styles/base/variables';
+
+.name {
+  $parent: &;
+  background-color: map-get($colors, 'background');
+  color: #fff;
+  text-align: center;
+  &__container {
+    height: 100vh;
+  }
+  &__form {
+    &--title {
+      font-size: 3rem;
+    }
+    &--input {
+      height: 45px;
+    }
+  }
+}
