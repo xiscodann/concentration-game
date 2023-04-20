@@ -1,6 +1,6 @@
 # Concentration Game
 
-Technical challenge for Frontend Developer. Development of a concentration game in React JS
+Technical challenge for Frontend Developer. Development of a concentration game in React JS by Daniel Ruiz
 
 ## 💫 Install
 
