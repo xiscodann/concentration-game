@@ -50,7 +50,7 @@ The project has three levels of difficulty (number of cards) where specific test
 
 1. Easy (4 cards): Used to quickly debug the case of completing the exercise
 2. Medium (12 cards): It is the default exercise
-3. Hard (18 cards): Used to maximize the use of responsive
+3. Hard (16 cards): Used to maximize the use of responsive
 
 <br/>
 

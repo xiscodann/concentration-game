@@ -29,6 +29,10 @@ const Congrats = () => {
     return (
       <div className='congrats'>
         <div className='container congrats__container'>
+          <img
+            className='congrats__container--check'
+            src='/src/assets/icon-check.svg'
+          />
           <h1>Excelente, {userName?.split(' ')[0]}</h1>
           <p className='mb-5'>
             Parece que dominas este nivel, ¿qué tal si cambias de dificultad?
@@ -50,11 +54,11 @@ const Congrats = () => {
                 customClass={'my-1 w-100'}
               />
             )}
-            {cards !== 20 && (
+            {cards !== 16 && (
               <Button
                 type='button'
                 text='Difícil'
-                onClickButton={() => handlerLevelDificult(20)}
+                onClickButton={() => handlerLevelDificult(16)}
                 customClass={'my-1 w-100'}
               />
             )}

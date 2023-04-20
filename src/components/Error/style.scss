@@ -18,8 +18,10 @@
     color: #fff;
     place-content: center;
     background-color: #10223a;
+    border-radius: 9px;
     height: 80vh;
     max-height: 650px;
+    margin: auto;
     width: 45vw;
     max-width: 650px;
     min-width: 330px;
@@ -27,6 +29,17 @@
     @include mq-md {
       width: 90%;
       min-height: 350px;
+    }
+    &--cancel {
+      width: 120px;
+      height: 120px;
+      margin: auto;
+      padding-bottom: 15px;
+      @include mq-md {
+        @include mq-landscape {
+          display: none;
+        }
+      }
     }
   }
 }

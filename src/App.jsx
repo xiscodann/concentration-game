@@ -9,7 +9,7 @@ const App = () => {
   const { userName } = readStorage() || false;
   const [stateGame, setStateGame] = useState({
     userName: '',
-    initialCards: 4,
+    initialCards: 12,
     retryFlag: false,
   });
 

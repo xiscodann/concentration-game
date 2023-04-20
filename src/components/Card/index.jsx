@@ -21,7 +21,7 @@ const Card = ({
     >
       <div className='custom-card__button--front'>
         <img
-          src={'./src/assets/card-background.jpg'}
+          src={'./src/assets/card-background-2.jpg'}
           alt={name}
           className='custom-card__button--image'
         />

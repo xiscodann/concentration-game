@@ -22,7 +22,12 @@ const HomeUserName = () => {
           <img
             src={'src/assets/cards-presentation.png'}
             alt='Concentrese logo game'
-            className='name__logo--image'
+            className='name__logo--image-back'
+          />
+          <img
+            src={'src/assets/cards-presentation.png'}
+            alt='Concentrese logo game'
+            className='name__logo--image-front'
           />
         </div>
         <form className='name__form' onSubmit={handlerOnSubmitForm}>
