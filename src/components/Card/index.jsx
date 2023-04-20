@@ -1,6 +1,8 @@
 import React from 'react';
 import './style.scss';
 
+import cardBackground from '../../assets/card-background-2.jpg';
+
 const Card = ({
   isFoundPair,
   id,
@@ -21,7 +23,7 @@ const Card = ({
     >
       <div className='custom-card__button--front'>
         <img
-          src={'./src/assets/card-background-2.jpg'}
+          src={cardBackground}
           alt={name}
           className='custom-card__button--image'
         />

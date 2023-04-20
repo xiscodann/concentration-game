@@ -4,6 +4,8 @@ import { StateContext } from '../../base/context';
 import { saveStorage } from '../../helpers';
 import { Button } from '../../components/Button';
 
+import cardPresentation from '../../assets/cards-presentation.png';
+
 const HomeUserName = () => {
   const nameValue = useRef();
   const { stateGame, setStateGame } = useContext(StateContext);
@@ -20,12 +22,12 @@ const HomeUserName = () => {
       <section className='name__container container d-flex align-items-center justify-content-center flex-column'>
         <div className='name__logo'>
           <img
-            src={'src/assets/cards-presentation.png'}
+            src={cardPresentation}
             alt='Concentrese logo game'
             className='name__logo--image-back'
           />
           <img
-            src={'src/assets/cards-presentation.png'}
+            src={cardPresentation}
             alt='Concentrese logo game'
             className='name__logo--image-front'
           />

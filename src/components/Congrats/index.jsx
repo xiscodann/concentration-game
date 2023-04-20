@@ -3,6 +3,8 @@ import './style.scss';
 import { StateContext } from '../../base/context';
 import { Button } from '../Button';
 
+import checkIcon from '../../assets/icon-check.svg';
+
 const Congrats = () => {
   const [renderCongrats, setRenderCongrats] = useState(false);
   const { stateGame, setStateGame } = useContext(StateContext);
@@ -29,10 +31,7 @@ const Congrats = () => {
     return (
       <div className='congrats'>
         <div className='container congrats__container'>
-          <img
-            className='congrats__container--check'
-            src='/src/assets/icon-check.svg'
-          />
+          <img className='congrats__container--check' src={checkIcon} />
           <h1>Excelente, {userName?.split(' ')[0]}</h1>
           <p className='mb-5'>
             Parece que dominas este nivel, ¿qué tal si cambias de dificultad?
